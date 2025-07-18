@@ -1,30 +1,33 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Soak Games</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    * {margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-    body {background:#111;color:#fff;}
-    header {text-align:center;padding:40px 20px;}
-    header img {height:80px;margin-bottom:10px;}
-    header h1 {font-size:1.2rem;font-weight:500;color:#aaa;}
-    header p {font-size:0.9rem;color:#888;}
-    main {max-width:900px;margin:0 auto;padding:20px;display:flex;flex-direction:column;gap:40px;}
-    section.card {background:#222;border-radius:16px;padding:30px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
-    section.card img {height:100px;width:auto;max-width:45%;object-fit:contain;}
-    section.card h2 {font-size:1.5rem;margin-bottom:10px;}
-    section.card p {font-size:1rem;color:#ccc;max-width:400px;}
-    section.card a {display:inline-block;margin-top:10px;color:#4da3ff;text-decoration:none;font-weight:600;}
-    .icons {display:flex;gap:20px;margin-top:20px;}
-    .icons a {font-size:1.4rem;color:#fff;text-decoration:none;}
-    footer {text-align:center;padding:30px;color:#666;font-size:0.85rem;}
-    .buttons {display:flex;gap:15px;margin-top:15px;flex-wrap:wrap;}
-    .buttons a {background:#444;color:#fff;padding:10px 15px;border-radius:8px;text-decoration:none;font-size:0.9rem;}
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    body{background:#111;color:#fff;}
+    header{text-align:center;padding:40px 20px;}
+    header img{height:80px;margin-bottom:10px;}
+    header h1{font-size:1.2rem;font-weight:500;color:#aaa;}
+    header p{font-size:0.9rem;color:#888;}
+    main{max-width:1100px;margin:0 auto;padding:20px;display:flex;flex-direction:column;gap:40px;}
+    section.card{background:#222;border-radius:16px;padding:30px;display:flex;justify-content:space-between;align-items:center;gap:30px;}
+    section.card img{height:auto;width:140px;flex-shrink:0;}
+    section.card div{flex:1;}
+    section.card h2{font-size:1.5rem;margin-bottom:10px;}
+    section.card p{font-size:1rem;color:#ccc;max-width:600px;}
+    section.card a{display:inline-block;margin-top:10px;color:#4da3ff;text-decoration:none;font-weight:600;}
+    .icons{display:flex;gap:20px;margin-top:20px;align-items:center;flex-wrap:wrap;}
+    .icons a img{height:32px;width:32px;}
+    footer{text-align:center;padding:30px;color:#666;font-size:0.85rem;}
+    .buttons{display:flex;gap:15px;margin-top:15px;flex-wrap:wrap;}
+    .buttons a{background:#444;color:#fff;padding:10px 15px;border-radius:8px;text-decoration:none;font-size:0.9rem;}
+    .privacy-link{display:block;margin-top:10px;color:#4da3ff;text-decoration:none;font-size:0.9rem;}
   </style>
 </head>
 <body>
@@ -58,12 +61,13 @@
         <h2>STAY TUNED!</h2>
         <p>Become a part of the community. Join our social media!</p>
         <div class="icons">
-          <a href="#">🎮</a>
-          <a href="#">▶️</a>
-          <a href="#">🐦</a>
-          <a href="#">📸</a>
+          <a href="https://discord.com" target="_blank"><img src="discord.png" alt="Discord"></a>
+          <a href="https://youtube.com" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+          <a href="https://twitter.com" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+          <a href="https://instagram.com" target="_blank"><img src="instagram.png" alt="Instagram"></a>
         </div>
         <a href="contact.html">Contact us ></a>
+        <a class="privacy-link" href="privacy.html">Privacy Policy ></a>
       </div>
       <img src="community.png" alt="community">
     </section>
@@ -74,7 +78,6 @@
 </body>
 </html>
 
-<!-- Create a new file named contact.html -->
 <!-- contact.html -->
 <!DOCTYPE html>
 <html lang="en">
@@ -86,18 +89,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    * {margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-    body {background:#111;color:#fff;}
-    header {text-align:center;padding:40px 20px;}
-    header img {height:80px;margin-bottom:10px;}
-    header h1 {font-size:1.2rem;font-weight:500;color:#aaa;}
-    header p {font-size:0.9rem;color:#888;}
-    main {display:flex;justify-content:center;padding:20px;}
-    form {background:#222;padding:30px;border-radius:16px;max-width:400px;width:100%;display:flex;flex-direction:column;gap:20px;}
-    input, textarea {padding:12px;border:none;border-radius:8px;font-size:1rem;width:100%;}
-    button {background:#4da3ff;color:#fff;border:none;padding:12px;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;}
-    button:hover {background:#1f8cff;}
-    footer {text-align:center;padding:30px;color:#666;font-size:0.85rem;margin-top:20px;}
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    body{background:#111;color:#fff;}
+    header{text-align:center;padding:40px 20px;}
+    header img{height:80px;margin-bottom:10px;}
+    header h1{font-size:1.8rem;font-weight:700;color:#fff;}
+    header p{font-size:0.9rem;color:#888;}
+    main{display:flex;justify-content:center;padding:20px;}
+    form{background:#222;padding:30px;border-radius:16px;max-width:400px;width:100%;display:flex;flex-direction:column;gap:20px;}
+    input,textarea{padding:12px;border:none;border-radius:8px;font-size:1rem;width:100%;}
+    button{background:#4da3ff;color:#fff;border:none;padding:12px;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;}
+    button:hover{background:#1f8cff;}
+    footer{text-align:center;padding:30px;color:#666;font-size:0.85rem;margin-top:20px;}
+    .privacy-link{display:block;margin-top:20px;color:#4da3ff;text-decoration:none;font-size:0.9rem;text-align:center;}
   </style>
 </head>
 <body>
@@ -113,6 +117,105 @@
       <textarea name="message" rows="5" placeholder="Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
+  </main>
+  <a class="privacy-link" href="privacy.html">Privacy Policy ></a>
+  <footer>
+    © 2025 Soak Games. All rights reserved.
+  </footer>
+</body>
+</html>
+
+<!-- privacy.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Soak Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    body{background:#111;color:#fff;}
+    header{text-align:center;padding:40px 20px;}
+    header img{height:80px;margin-bottom:10px;}
+    header h1{font-size:1.8rem;font-weight:700;color:#fff;}
+    main{max-width:900px;margin:0 auto;padding:20px;line-height:1.6;color:#ccc;}
+    h2{color:#4da3ff;margin:20px 0 10px;}
+    p{margin-bottom:10px;}
+    ul{margin-left:20px;margin-bottom:10px;}
+    li{margin-bottom:8px;}
+    footer{text-align:center;padding:30px;color:#666;font-size:0.85rem;margin-top:40px;}
+    hr{border:none;border-top:1px solid #333;margin:20px 0;}
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Soak Games Logo">
+    <h1>Privacy Policy</h1>
+  </header>
+  <main>
+    <p><strong>Last updated November, 14th 2023</strong></p>
+    <p>This Privacy Policy explains how your personal data is collected and processed by Soak Games when you use our applications.</p>
+    <hr>
+    <h2>Remit of the personal data protection policy</h2>
+    <p>This personal data protection policy is applicable to all of our applications.</p>
+    <h2>What data is collected?</h2>
+    <ul>
+      <li>Identity-related data (e.g. name, email, profile info when using Facebook login)</li>
+      <li>IDFA (iOS) and GAID (Android)</li>
+      <li>Data about your activity on our apps and how you interact with ads</li>
+      <li>Geographical position (IP address)</li>
+    </ul>
+    <p>We also use cookies and external SDKs for analytics and ads, such as:</p>
+    <ul>
+      <li>Games Analytics (analytical SDK)</li>
+      <li>Facebook (analytical SDK)</li>
+      <li>Admob (SDK advertising)</li>
+    </ul>
+    <h2>Purposes of processing by Soak Games</h2>
+    <ul>
+      <li>Provide our applications</li>
+      <li>Guarantee use and improvement of our applications</li>
+      <li>Develop new applications</li>
+      <li>Understand your interests to propose targeted and relevant advertisements</li>
+      <li>Statistics on your use of the games</li>
+      <li>Communication when you contact us</li>
+    </ul>
+    <h2>Term of data storage</h2>
+    <p>We store data for a maximum of 13 months after collection, after which it may be anonymized or deleted.</p>
+    <h2>Categories of recipients</h2>
+    <p>Data is shared only with internal teams and technical service providers under strict confidentiality. It may be disclosed:</p>
+    <ul>
+      <li>If required by law</li>
+      <li>For national security or legal proceedings</li>
+      <li>In the event of transfer, merger, or sale</li>
+    </ul>
+    <h2>Data transfer</h2>
+    <p>Data may be transferred outside the EU through certified entities under Privacy Shield.</p>
+    <h2>Personal data concerning children</h2>
+    <p>Soak Games does not knowingly collect data from children under 15 years old.</p>
+    <h2>Your rights concerning data collected</h2>
+    <ul>
+      <li>Right to confirmation of processing</li>
+      <li>Right to access</li>
+      <li>Right to rectification</li>
+      <li>Right to deletion</li>
+      <li>Right to object or limit processing</li>
+      <li>Right to data portability</li>
+    </ul>
+    <h2>Personal data security</h2>
+    <p>We implement measures to prevent unauthorized access or alteration. If a breach occurs, we will notify you if required.</p>
+    <h2>Request user data deletion</h2>
+    <p>To delete user data collected by Soak Games, please reach out to <strong>info@soakgames.com</strong>.</p>
+    <p>For third-party SDKs, contact their support directly:</p>
+    <ul>
+      <li>GameAnalytics: privacy@gameanalytics.com</li>
+      <li>Facebook Analytics: see their privacy policy</li>
+      <li>Adjust: privacy@adjust.com</li>
+      <li>Voodoo: dpo@voodoo.io</li>
+    </ul>
   </main>
   <footer>
     © 2025 Soak Games. All rights reserved.
