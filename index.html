@@ -13,21 +13,64 @@
     body{background:#111;color:#fff;}
     header{text-align:center;padding:40px 20px;}
     header img{height:80px;margin-bottom:10px;}
-    header h1{font-size:1.2rem;font-weight:700;color:#aaa;} /* bold yapıldı */
+    header h1{font-size:1.2rem;font-weight:700;color:#aaa;}
     header p{font-size:0.9rem;color:#888;}
     main{max-width:1100px;margin:0 auto;padding:20px;display:flex;flex-direction:column;gap:40px;}
-    section.card{background:#222;border-radius:16px;padding:30px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:30px;} /* ortalama için değiştirildi */
-    section.card img{height:auto;width:140px;}
-    section.card div{flex:1;}
+    section.card{
+      background:#222;
+      border-radius:16px;
+      padding:30px;
+      display:flex;
+      flex-direction:row; /* yan yana dizim */
+      align-items:center;
+      justify-content:flex-start; /* sola dayalı genel yapı */
+      text-align:left; /* içerik sola */
+      gap:40px; /* resim ile yazı arası boşluk */
+    }
+    section.card img{
+      height:auto;
+      width:140px;
+      flex-shrink:0;
+    }
+    section.card div{
+      flex:1;
+    }
     section.card h2{font-size:1.5rem;margin-bottom:10px;}
-    section.card p{font-size:1rem;color:#ccc;max-width:600px;margin:0 auto;}
+    section.card p{font-size:1rem;color:#ccc;max-width:600px;}
     section.card a{display:inline-block;margin-top:10px;color:#4da3ff;text-decoration:none;font-weight:600;}
-    .icons{display:flex;gap:20px;margin-top:20px;align-items:center;flex-wrap:wrap;justify-content:center;} /* ortalama için */
+    .icons{
+      display:flex;
+      gap:20px;
+      margin-top:20px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
     .icons a img{height:32px;width:32px;}
     footer{text-align:center;padding:30px;color:#666;font-size:0.85rem;}
-    .buttons{display:flex;gap:15px;margin-top:15px;flex-wrap:wrap;justify-content:center;} /* ortalama için */
-    .buttons a{background:#444;color:#fff;padding:10px 15px;border-radius:8px;text-decoration:none;font-size:0.9rem;}
-    .privacy-link{display:block;margin-top:10px;color:#4da3ff;text-decoration:none;font-size:0.9rem;}
+    .buttons{
+      display:flex;
+      gap:15px;
+      margin-top:15px;
+      flex-wrap:wrap;
+    }
+    .buttons a{
+      background:#444;
+      color:#fff;
+      padding:10px 15px;
+      border-radius:8px;
+      text-decoration:none;
+      font-size:0.9rem;
+    }
+    .privacy-link{
+      display:block;
+      margin-top:10px;
+      color:#4da3ff;
+      text-decoration:none;
+      font-size:0.9rem;
+    }
+    @media(max-width:768px){
+      section.card{flex-direction:column;text-align:center;align-items:center;}
+    }
   </style>
 </head>
 <body>
