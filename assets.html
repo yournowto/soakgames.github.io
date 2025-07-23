@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magnificent Assets – Soak Games</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #111;
+      color: #fff;
+    }
+
+    a {
+      color: #4da3ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* HEADER */
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header img {
+      height: 60px;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #aaa;
+    }
+
+    /* MAIN */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    /* ASSET CARD */
+    .asset-card {
+      background: #222;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .asset-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .asset-card img {
+      width: 100%;
+      display: block;
+    }
+
+    .asset-details {
+      padding: 25px 30px;
+    }
+
+    .asset-details h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .asset-details p {
+      font-size: 1rem;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="logo.png" alt="Soak Games Logo" /></a>
+    <h1>MAGNIFICENT ASSETS</h1>
+  </header>
+
+  <main>
+    <!-- SMART DEPENDENCY DIAGRAM -->
+    <article class="asset-card">
+      <a href="smart-dependency-diagram.html"><img src="images/dependency-banner.png" alt="Smart Dependency Diagram banner" /></a>
+      <div class="asset-details">
+        <h2>Smart Dependency Diagram</h2>
+        <p>An AI‑powered Unity Editor extension for visualizing and analyzing project dependencies.</p>
+        <a href="smart-dependency-diagram.html">Learn more&nbsp;&gt;</a>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
