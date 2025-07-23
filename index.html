@@ -10,33 +10,48 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <style>
+    /* ---------------- GLOBAL ---------------- */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+      font-family: "Poppins", sans-serif;
     }
+
     body {
       background: #111;
       color: #fff;
     }
+
+    a {
+      color: #4da3ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* ---------------- HEADER ---------------- */
     header {
       text-align: center;
       padding: 40px 20px;
     }
+
     header img {
       height: 80px;
       margin-bottom: 10px;
     }
+
     header h1 {
       font-size: 1.2rem;
       font-weight: 700;
       color: #aaa;
     }
+
     header p {
       font-size: 0.9rem;
       color: #888;
     }
+
+    /* ---------------- MAIN LAYOUT ---------------- */
     main {
       max-width: 1100px;
       margin: 0 auto;
@@ -45,7 +60,9 @@
       flex-direction: column;
       gap: 40px;
     }
-    section.card {
+
+    /* ---------------- CARD ---------------- */
+    .card {
       background: #222;
       border-radius: 16px;
       padding: 30px 40px;
@@ -55,32 +72,38 @@
       gap: 40px;
       text-align: left;
     }
-    section.card img {
+
+    .card img {
       width: 140px;
       height: auto;
       flex-shrink: 0;
       order: 2;
       margin-left: 40px;
     }
-    section.card div {
+
+    .card-content {
       flex: 1;
     }
-    section.card h2 {
+
+    .card h2 {
       font-size: 1.5rem;
       margin-bottom: 10px;
     }
-    section.card p {
+
+    .card p {
       font-size: 1rem;
       color: #ccc;
       max-width: 600px;
     }
-    section.card a {
+
+    .coming-soon {
       display: inline-block;
       margin-top: 10px;
-      color: #4da3ff;
-      text-decoration: none;
+      color: #666;
       font-weight: 600;
     }
+
+    /* ---------------- ICON STRIP ---------------- */
     .icons {
       display: flex;
       gap: 20px;
@@ -88,36 +111,40 @@
       align-items: center;
       flex-wrap: wrap;
     }
-    .icons a img {
+
+    .icons img {
       width: 32px;
       height: 32px;
     }
+
     .privacy-link {
       display: block;
       margin-top: 10px;
-      color: #4da3ff;
-      text-decoration: none;
       font-size: 0.9rem;
     }
+
+    /* ---------------- FOOTER ---------------- */
     footer {
       text-align: center;
       padding: 30px;
       color: #666;
       font-size: 0.85rem;
     }
+
+    /* ---------------- RESPONSIVE ---------------- */
     @media (max-width: 768px) {
-      section.card {
+      .card {
         flex-direction: column;
         text-align: center;
       }
-      section.card img {
+
+      .card img {
         order: 0;
         margin: 0 0 20px 0;
       }
     }
   </style>
 </head>
-
 <body>
   <header>
     <img src="logo.png" alt="Soak Games Logo" />
@@ -126,26 +153,29 @@
   </header>
 
   <main>
+    <!-- MAGNIFICENT GAMES -->
     <section class="card">
-      <div>
+      <div class="card-content">
         <h2>MAGNIFICENT GAMES</h2>
         <p>We’re all about creating awesome games across all genres.</p>
-        <a href="#">Our projects&nbsp;&gt;</a>
+        <span class="coming-soon...">Coming&nbsp;soon…</span>
       </div>
       <img src="avatar.png" alt="Avatar illustration" />
     </section>
 
+    <!-- MAGNIFICENT ASSETS -->
     <section class="card">
-      <div>
+      <div class="card-content">
         <h2>MAGNIFICENT ASSETS</h2>
         <p>Enhance your game development with our AI‑powered tools and templates for Unity.</p>
-        <p><strong>Coming Soon:</strong> <em>Smart Dependency Diagram</em> — an intelligent class‑dependency analyser and visualiser for the Unity Editor.</p>
+        <a href="assets.html">View assets&nbsp;&gt;</a>
       </div>
       <img src="template.png" alt="Template illustration" />
     </section>
 
+    <!-- COMMUNITY -->
     <section class="card">
-      <div>
+      <div class="card-content">
         <h2>STAY MAGNIFICENT!</h2>
         <p>Become a part of the community. Join our social media!</p>
         <div class="icons">
@@ -155,7 +185,7 @@
           <a href="https://instagram.com" target="_blank"><img src="instagram.png" alt="Instagram" /></a>
         </div>
         <a href="contact.html">Contact&nbsp;us&nbsp;&gt;</a>
-        <a class="privacy-link" href="privacy.html">Privacy Policy&nbsp;&gt;</a>
+        <a class="privacy-link" href="privacy.html">Privacy&nbsp;Policy&nbsp;&gt;</a>
       </div>
       <img src="community.png" alt="Community illustration" />
     </section>
