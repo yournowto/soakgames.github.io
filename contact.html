@@ -62,18 +62,18 @@
       e.preventDefault();
 
       const status = document.getElementById('form-status');
-      status.textContent = 'Gönderiliyor...';
+      status.textContent = 'Sending...';
 
       emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this)
         .then(() => {
           status.className = 'success';
-          status.textContent = 'Mesajınız başarıyla gönderildi!';
+          status.textContent = 'Mail sent successfully!';
           this.reset();
         })
         .catch((err) => {
           console.error(err);
           status.className = 'error';
-          status.textContent = 'Gönderim sırasında bir hata oluştu. Lütfen tekrar deneyin.';
+          status.textContent = 'An error occured while sending the mail. Please try again later.';
         });
     });
   </script>
