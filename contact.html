@@ -21,6 +21,8 @@
     button:hover{background:#1f8cff;}
     footer{text-align:center;padding:30px;color:#666;font-size:0.85rem;margin-top:20px;}
     .privacy-link{display:block;margin-top:20px;color:#4da3ff;text-decoration:none;font-size:0.9rem;text-align:center;}
+    .success{color:#6ee7b7;text-align:center;font-size:0.9rem;margin-top:-10px;}
+    .error{color:#f87171;text-align:center;font-size:0.9rem;margin-top:-10px;}
   </style>
 </head>
 <body>
@@ -29,17 +31,51 @@
     <h1>GET IN TOUCH</h1>
     <p>info@soakgames.com</p>
   </header>
+
   <main>
-    <form action="mailto:info@soaks.games" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Name" required>
-      <input type="email" name="email" placeholder="Email" required>
+    <form id="contact-form">
+      <input type="text" name="from_name" placeholder="Name" required>
+      <input type="email" name="reply_to" placeholder="Email" required>
       <textarea name="message" rows="5" placeholder="Message" required></textarea>
       <button type="submit">Send Message</button>
+      <span id="form-status"></span>
     </form>
   </main>
+
   <a class="privacy-link" href="privacy.html">Privacy Policy ></a>
   <footer>
     © 2025 Soak Games. All rights reserved.
   </footer>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@4/dist/email.min.js"></script>
+  <script>
+    // 1) Ayarlarınızı girin
+    const SERVICE_ID  = 'service_dug0vbc';
+    const TEMPLATE_ID = 'template_axri6g9';
+    const PUBLIC_KEY  = 'h2Zxsw3V_Tw2kD8y0';
+
+    emailjs.init(PUBLIC_KEY);
+
+    // 2) Form submit yakala
+    document.getElementById('contact-form').addEventListener('submit', function(e){
+      e.preventDefault();
+
+      const status = document.getElementById('form-status');
+      status.textContent = 'Gönderiliyor...';
+
+      emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this)
+        .then(() => {
+          status.className = 'success';
+          status.textContent = 'Mesajınız başarıyla gönderildi!';
+          this.reset();
+        })
+        .catch((err) => {
+          console.error(err);
+          status.className = 'error';
+          status.textContent = 'Gönderim sırasında bir hata oluştu. Lütfen tekrar deneyin.';
+        });
+    });
+  </script>
 </body>
 </html>
