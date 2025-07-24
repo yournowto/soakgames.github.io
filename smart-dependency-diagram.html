@@ -66,11 +66,20 @@
       margin-bottom: 18px;
     }
 
-    .coming-soon {
+    /* CTA BUTTON */
+    .cta-btn {
       display: inline-block;
-      margin-top: 15px;
-      color: #666;
-      font-weight: 600;
+      margin-top: 22px;
+      padding: 14px 28px;
+      background: #4da3ff;
+      color: #111;
+      font-weight: 700;
+      border-radius: 10px;
+      transition: background 0.2s ease;
+    }
+
+    .cta-btn:hover {
+      background: #6db4ff;
     }
   </style>
 </head>
@@ -89,7 +98,16 @@
       <p>🎨 With its professional node‑based interface, color‑coded categories, and interactive playback controls, you can trace Unity lifecycle events like <code>Awake()</code>, <code>Start()</code>, and <code>Update()</code> in real time.</p>
       <p>👤 Perfect for solo developers, 👥 team projects, and 🏢 enterprise‑level code reviews, it streamlines onboarding, improves code quality, and saves debugging time.</p>
       <p>💻 Works seamlessly on Windows, Mac, and Linux with Unity 2021.3+, requires no complex setup, and comes with 📚 documentation, 🎥 tutorials, and 📄 export tools for further analysis.</p>
-      <span class="coming-soon">Available&nbsp;soon&nbsp;on&nbsp;Unity Asset Store</span>
+
+      <!-- CTA -->
+      <a
+        href="https://assetstore.unity.com/packages/package/326818"
+        class="cta-btn"
+        target="_blank"
+        rel="noopener"
+      >
+        Get it on Unity Asset Store
+      </a>
     </section>
   </main>
 </body>
